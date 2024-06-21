@@ -1,4 +1,16 @@
+enum Transportation{
+  cars,
+  motocycles,
+  buses,
+  trains,
+  planes
+
+}
 void main(){
+
+
+
+
  int number = 0;
 //if statements
  if(number > 0){
@@ -124,5 +136,18 @@ switch(grade){
  print("Discount: ${discount*100}%");
  print("Real cost: ${purchaseAmount - (discount * purchaseAmount)}");
 
+//Exhaustiveness Checking
+
+Transportation transport = Transportation.buses;
+
+double fees = switch (transport) {
+  Transportation.buses => 45.0,
+  Transportation.cars => 60.0,
+  Transportation.motocycles => 35.0,
+  Transportation.planes => 100.0,
+  Transportation.trains => 25.0,
+};
+
+print("Your travel will cost $fees");
 
 }
