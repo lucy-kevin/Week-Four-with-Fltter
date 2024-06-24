@@ -53,7 +53,7 @@ switch(value){
   case ["circle", int radius]:
     print("the radius is $radius");
 
-  case ["rectangle", int width, int height]:
+  case ["rectangle", int height]:
      print("the height is $height");
    default:
    print("Wrong");
